@@ -12,7 +12,7 @@ namespace GPS
 {
     public partial class frmPrincipal : Form
     {
-        int TotalRutas = 0, dias;
+        int TotalRutas = 0;
         string Titulo;
         double Latitud, Longitud;
 
@@ -182,7 +182,7 @@ namespace GPS
                 }
                 else
                 {
-                    GMapRoute Ruta = new GMapRoute(PointsRouts, "Venta en Ruta de " + RutaAnterior);
+                    GMapRoute Ruta = new GMapRoute(PointsRouts, "Ruta " + RutaAnterior);
 
                     Ruta.Stroke = new Pen(Color.FromName(ColorRuta), 3);
                     Rutas.Routes.Add(Ruta);
@@ -205,7 +205,7 @@ namespace GPS
 
                 if (i == Puntos.Count)
                 {
-                    GMapRoute Ruta = new GMapRoute(PointsRouts, "Venta en Ruta de " + RutaAnterior);
+                    GMapRoute Ruta = new GMapRoute(PointsRouts, "Ruta " + RutaAnterior);
 
                     Ruta.Stroke = new Pen(Color.FromName(ColorRuta), 3);
                     Rutas.Routes.Add(Ruta);
